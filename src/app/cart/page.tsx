@@ -1,8 +1,62 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <div className='h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] flex flex-col text-red-500 lg:flex-row'>
+      {/* PRODUCT CONT */}
+      <div className='h-1/2 p-4 flex flex-col justify-center overflow-scroll lg:h-full lg:w-2/3 xl:w-1/2 xl:p-40 lg:p-20 xl:text-xl'>
+        {/* SINGLE ITEM CONT */}
+        <div className='flex items-center justify-between mb-4 mt-8'>
+            <Image src="/temporary/p1.png" alt="pizza" width={100} height={100}></Image>
+            <div className=''>
+              <h1 className='uppercase text-xl font-bold'>sicilian</h1>
+              <span>Large</span>
+            </div>
+            <h2 className='font-bold'>80.00</h2>
+            <span className='cursor-pointer'>X</span>
+        </div>
+        <div className='flex items-center justify-between mb-4'>
+            <Image src="/temporary/p1.png" alt="pizza" width={100} height={100}></Image>
+            <div className=''>
+              <h1 className='uppercase text-xl font-bold'>sicilian</h1>
+              <span>Large</span>
+            </div>
+            <h2 className='font-bold'>80.00</h2>
+            <span className='cursor-pointer'>X</span>
+        </div><div className='flex items-center justify-between mb-4'>
+            <Image src="/temporary/p1.png" alt="pizza" width={100} height={100}></Image>
+            <div className=''>
+              <h1 className='uppercase text-xl font-bold'>sicilian</h1>
+              <span>Large</span>
+            </div>
+            <h2 className='font-bold'>80.00</h2>
+            <span className='cursor-pointer'>X</span>
+        </div>
+      </div>
+      {/* PAYMENT CONT */}
+      <div className='h-1/2 p-4 bg-fuchsia-50 flex flex-col justify-center gap-4 lg:h-full lg:w-1/3 xl:w-1/2 xl:p-40 lg:p-20 xl:text-xl'>
+      <div className='flex justify-between'>
+          <span>subtotal (3 items)</span>
+          <span>80.00</span>
+        </div>
+        <div className='flex justify-between'>
+          <span>Service Cost</span>
+          <span>0.00</span>
+        </div>
+        <div className='flex justify-between'>
+          <span>Delivery cost </span>
+          <span className='text-green-500'>Free</span>
+        </div>
+        <div className='flex justify-between'>
+          <span className='font-bold'>TOTAL (INCL. VAT) (3 items)</span>
+          <span>80.00</span>
+        </div>
+        <hr className='my-2'/>
+        <button className='bg-red-500 rounded-md p-3 text-white w-1/2 self-end'>Checkout</button>
+      </div>
+
+    </div>
   )
 }
 
